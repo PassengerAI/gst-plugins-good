@@ -569,10 +569,10 @@ gst_v4l2_open (GstV4l2Object * v4l2object)
               V4L2_CAP_VIDEO_CAPTURE_MPLANE)))
     goto not_capture;
 
-  if (GST_IS_V4L2SINK (v4l2object->element) &&
-      !(v4l2object->device_caps & (V4L2_CAP_VIDEO_OUTPUT |
-              V4L2_CAP_VIDEO_OUTPUT_MPLANE)))
-    goto not_output;
+  // if (GST_IS_V4L2SINK (v4l2object->element) &&
+  //     !(v4l2object->device_caps & (V4L2_CAP_VIDEO_OUTPUT |
+  //             V4L2_CAP_VIDEO_OUTPUT_MPLANE)))
+  //   goto not_output;
 
   if (GST_IS_V4L2_VIDEO_DEC (v4l2object->element) &&
       !GST_V4L2_IS_M2M (v4l2object->device_caps))
